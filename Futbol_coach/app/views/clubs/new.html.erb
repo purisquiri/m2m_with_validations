@@ -1,2 +1,9 @@
 <h1>Clubs#new</h1>
-<p>Find me in app/views/clubs/new.html.erb</p>
+
+<%if @club.errors.any?%>
+
+    <%@club.errors.full_messages.each do |msg|%>
+        <div><%= msg%></div>
+    <%end%><br>
+<%end%>    
+<%=render partial: 'club_form'%>

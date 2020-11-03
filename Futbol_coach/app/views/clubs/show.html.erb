@@ -1,2 +1,10 @@
-<h1>Clubs#show</h1>
-<p>Find me in app/views/clubs/show.html.erb</p>
+<h1><%=@club.name%></h1>
+
+
+<h3>City: <%=@club.city%><br></h3>
+<h3>Home Arena: <%=@club.home_arena%></h3><br>
+<h3>Statistics: Wins: <%=@club.wins%> Losses: <%=@club.losses%> <br></h3>
+
+<%=link_to "Edit your club", edit_club_path(@club.id)%><br>
+<%=link_to "Delete your team", club_path(@club), method: "delete" %><br>
+<%=link_to "Go back to index", clubs_path%>
