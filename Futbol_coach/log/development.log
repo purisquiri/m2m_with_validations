@@ -1,0 +1,618 @@
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClubs (20201103160509)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "clubs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "city" varchar, "home_arena" varchar, "wins" integer, "losses" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201103160509"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePlayers (20201103160733)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone_number" integer, "email" varchar, "player_number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201103160733"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-03 16:16:55.040643"], ["updated_at", "2020-11-03 16:16:55.040643"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddClubIdToPlayers (20201103162756)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "players" ADD "club_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201103162756"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (1.1ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Morocco"], ["city", "Moscow"], ["home_arena", "Mordovia Arena"], ["wins", 1], ["losses", 5], ["created_at", "2020-11-03 17:52:45.667915"], ["updated_at", "2020-11-03 17:52:45.667915"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Portugal"], ["city", "Sochi"], ["home_arena", "Fisht Stadium"], ["wins", 3], ["losses", 2], ["created_at", "2020-11-03 17:52:45.672636"], ["updated_at", "2020-11-03 17:52:45.672636"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.2ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Japan"], ["city", "Kaliningrad"], ["home_arena", "Mordovia Arena"], ["wins", 2], ["losses", 5], ["created_at", "2020-11-03 17:52:45.675660"], ["updated_at", "2020-11-03 17:52:45.675660"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Japan"], ["city", "Kaliningrad"], ["home_arena", "Spartak Stadium"], ["wins", 4], ["losses", 4], ["created_at", "2020-11-03 17:52:45.678726"], ["updated_at", "2020-11-03 17:52:45.678726"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Egypt"], ["city", "Saint Petersburg"], ["home_arena", "Rostov Arena"], ["wins", 3], ["losses", 4], ["created_at", "2020-11-03 17:52:45.682004"], ["updated_at", "2020-11-03 17:52:45.682004"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.7ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Paul Klee"], ["phone_number", 0], ["email", "edison@mosciski.com"], ["player_number", 12], ["created_at", "2020-11-03 17:52:45.714079"], ["updated_at", "2020-11-03 17:52:45.714079"], ["club_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kahlo"], ["phone_number", 689], ["email", "aja@parker.co"], ["player_number", 8], ["created_at", "2020-11-03 17:52:45.719510"], ["updated_at", "2020-11-03 17:52:45.719510"], ["club_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dali"], ["phone_number", 358], ["email", "elijah.sawayn@pfannerstill.name"], ["player_number", 15], ["created_at", "2020-11-03 17:52:45.724536"], ["updated_at", "2020-11-03 17:52:45.724536"], ["club_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cezanne"], ["phone_number", 644], ["email", "terrance_halvorson@berge.name"], ["player_number", 19], ["created_at", "2020-11-03 17:52:45.729763"], ["updated_at", "2020-11-03 17:52:45.729763"], ["club_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pollock"], ["phone_number", 0], ["email", "josiah.shields@price.net"], ["player_number", 14], ["created_at", "2020-11-03 17:52:45.734808"], ["updated_at", "2020-11-03 17:52:45.734808"], ["club_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Titian"], ["phone_number", 1], ["email", "earlie_doyle@heller.com"], ["player_number", 19], ["created_at", "2020-11-03 17:52:45.739270"], ["updated_at", "2020-11-03 17:52:45.739270"], ["club_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Klimt"], ["phone_number", 0], ["email", "jacquelynn.smitham@labadie.com"], ["player_number", 3], ["created_at", "2020-11-03 17:52:45.744309"], ["updated_at", "2020-11-03 17:52:45.744309"], ["club_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winslow Homer"], ["phone_number", 651], ["email", "roland@metz.io"], ["player_number", 11], ["created_at", "2020-11-03 17:52:45.749411"], ["updated_at", "2020-11-03 17:52:45.749411"], ["club_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vincent"], ["phone_number", 1], ["email", "camelia.leffler@bode.org"], ["player_number", 5], ["created_at", "2020-11-03 17:52:45.754135"], ["updated_at", "2020-11-03 17:52:45.754135"], ["club_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Donatello"], ["phone_number", 161], ["email", "rosy_torp@conroy.co"], ["player_number", 16], ["created_at", "2020-11-03 17:52:45.758512"], ["updated_at", "2020-11-03 17:52:45.758512"], ["club_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Matisse"], ["phone_number", 586], ["email", "rosanne_rutherford@ondricka.net"], ["player_number", 4], ["created_at", "2020-11-03 17:52:45.763330"], ["updated_at", "2020-11-03 17:52:45.763330"], ["club_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vettriano"], ["phone_number", 1], ["email", "gordon@bernier-klein.biz"], ["player_number", 15], ["created_at", "2020-11-03 17:52:45.767965"], ["updated_at", "2020-11-03 17:52:45.767965"], ["club_id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winslow Homer"], ["phone_number", 0], ["email", "laverne@mann.net"], ["player_number", 7], ["created_at", "2020-11-03 17:52:45.773219"], ["updated_at", "2020-11-03 17:52:45.773219"], ["club_id", 3]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pissarro"], ["phone_number", 574], ["email", "melodee@walter-mccullough.name"], ["player_number", 5], ["created_at", "2020-11-03 17:52:45.783623"], ["updated_at", "2020-11-03 17:52:45.783623"], ["club_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dali"], ["phone_number", 1], ["email", "raquel_mraz@kuvalis.org"], ["player_number", 2], ["created_at", "2020-11-03 17:52:45.788849"], ["updated_at", "2020-11-03 17:52:45.788849"], ["club_id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cezanne"], ["phone_number", 0], ["email", "nila@gulgowski.org"], ["player_number", 15], ["created_at", "2020-11-03 17:52:45.809051"], ["updated_at", "2020-11-03 17:52:45.809051"], ["club_id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vincent"], ["phone_number", 746], ["email", "jonah@altenwerth.biz"], ["player_number", 18], ["created_at", "2020-11-03 17:52:45.814771"], ["updated_at", "2020-11-03 17:52:45.814771"], ["club_id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rembrandt"], ["phone_number", 225], ["email", "dorie.haley@beier.name"], ["player_number", 11], ["created_at", "2020-11-03 17:52:45.819985"], ["updated_at", "2020-11-03 17:52:45.819985"], ["club_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rubens"], ["phone_number", 603], ["email", "conception_prohaska@hills.org"], ["player_number", 4], ["created_at", "2020-11-03 17:52:45.825245"], ["updated_at", "2020-11-03 17:52:45.825245"], ["club_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Durer"], ["phone_number", 0], ["email", "edris@metz.net"], ["player_number", 15], ["created_at", "2020-11-03 17:52:45.830448"], ["updated_at", "2020-11-03 17:52:45.830448"], ["club_id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rubens"], ["phone_number", 1], ["email", "julie.nader@flatley.org"], ["player_number", 14], ["created_at", "2020-11-03 17:52:45.835312"], ["updated_at", "2020-11-03 17:52:45.835312"], ["club_id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rothko"], ["phone_number", 346], ["email", "irma@trantow.co"], ["player_number", 10], ["created_at", "2020-11-03 17:52:45.840598"], ["updated_at", "2020-11-03 17:52:45.840598"], ["club_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Da Vinci"], ["phone_number", 751], ["email", "trinidad@williamson-waelchi.info"], ["player_number", 14], ["created_at", "2020-11-03 17:52:45.845943"], ["updated_at", "2020-11-03 17:52:45.845943"], ["club_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pissarro"], ["phone_number", 1], ["email", "frederick.beer@huel.biz"], ["player_number", 3], ["created_at", "2020-11-03 17:52:45.850700"], ["updated_at", "2020-11-03 17:52:45.850700"], ["club_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Monet"], ["phone_number", 531], ["email", "fredric.dibbert@emard-schulist.co"], ["player_number", 1], ["created_at", "2020-11-03 17:52:45.855276"], ["updated_at", "2020-11-03 17:52:45.855276"], ["club_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.4ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.2ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.2ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.7ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Costa Rica"], ["city", "Moscow"], ["home_arena", "Rostov Arena"], ["wins", 3], ["losses", 4], ["created_at", "2020-11-03 17:57:41.129990"], ["updated_at", "2020-11-03 17:57:41.129990"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nigeria"], ["city", "Samara"], ["home_arena", "Fisht Stadium"], ["wins", 3], ["losses", 2], ["created_at", "2020-11-03 17:57:41.134506"], ["updated_at", "2020-11-03 17:57:41.134506"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Germany"], ["city", "Kazan"], ["home_arena", "Mordovia Arena"], ["wins", 3], ["losses", 4], ["created_at", "2020-11-03 17:57:41.138300"], ["updated_at", "2020-11-03 17:57:41.138300"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.4ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Croatia"], ["city", "Kaliningrad"], ["home_arena", "Volgograd Arena"], ["wins", 2], ["losses", 3], ["created_at", "2020-11-03 17:57:41.141946"], ["updated_at", "2020-11-03 17:57:41.141946"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iran"], ["city", "Volgograd"], ["home_arena", "Mordovia Arena"], ["wins", 2], ["losses", 1], ["created_at", "2020-11-03 17:57:41.145693"], ["updated_at", "2020-11-03 17:57:41.145693"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.2ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.2ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.2ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.4ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Belgium"], ["city", "Saransk"], ["home_arena", "Kasan Arena"], ["wins", 3], ["losses", 2], ["created_at", "2020-11-03 17:58:02.156785"], ["updated_at", "2020-11-03 17:58:02.156785"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "England"], ["city", "Volgograd"], ["home_arena", "Kaliningrad Stadium"], ["wins", 4], ["losses", 1], ["created_at", "2020-11-03 17:58:02.161137"], ["updated_at", "2020-11-03 17:58:02.161137"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Croatia"], ["city", "Kaliningrad"], ["home_arena", "Samara Arena"], ["wins", 3], ["losses", 1], ["created_at", "2020-11-03 17:58:02.164580"], ["updated_at", "2020-11-03 17:58:02.164580"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Saudi Arabia"], ["city", "Volgograd"], ["home_arena", "Ekaterinburg Arena"], ["wins", 4], ["losses", 1], ["created_at", "2020-11-03 17:58:02.168121"], ["updated_at", "2020-11-03 17:58:02.168121"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Columbia"], ["city", "Sochi"], ["home_arena", "Ekaterinburg Arena"], ["wins", 2], ["losses", 4], ["created_at", "2020-11-03 17:58:02.172020"], ["updated_at", "2020-11-03 17:58:02.172020"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Donatello"], ["phone_number", 0], ["email", "laverne@ryan-grady.biz"], ["player_number", 15], ["created_at", "2020-11-03 17:58:02.188901"], ["updated_at", "2020-11-03 17:58:02.188901"], ["club_id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rembrandt"], ["phone_number", 0], ["email", "abel@aufderhar.com"], ["player_number", 15], ["created_at", "2020-11-03 17:58:02.194039"], ["updated_at", "2020-11-03 17:58:02.194039"], ["club_id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Matisse"], ["phone_number", 0], ["email", "latoyia.gerlach@monahan.org"], ["player_number", 1], ["created_at", "2020-11-03 17:58:02.198950"], ["updated_at", "2020-11-03 17:58:02.198950"], ["club_id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cezanne"], ["phone_number", 0], ["email", "dolly.predovic@schmidt-dickens.biz"], ["player_number", 6], ["created_at", "2020-11-03 17:58:02.214325"], ["updated_at", "2020-11-03 17:58:02.214325"], ["club_id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rothko"], ["phone_number", 0], ["email", "dale_block@spinka-bauch.name"], ["player_number", 19], ["created_at", "2020-11-03 17:58:02.218994"], ["updated_at", "2020-11-03 17:58:02.218994"], ["club_id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Donatello"], ["phone_number", 0], ["email", "hana@renner-bashirian.com"], ["player_number", 3], ["created_at", "2020-11-03 17:58:02.223703"], ["updated_at", "2020-11-03 17:58:02.223703"], ["club_id", 12]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chagall"], ["phone_number", 0], ["email", "rigoberto@welch-hand.org"], ["player_number", 19], ["created_at", "2020-11-03 17:58:02.228687"], ["updated_at", "2020-11-03 17:58:02.228687"], ["club_id", 12]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Caravaggio"], ["phone_number", 0], ["email", "olive@rolfson-wisoky.name"], ["player_number", 11], ["created_at", "2020-11-03 17:58:02.237522"], ["updated_at", "2020-11-03 17:58:02.237522"], ["club_id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vettriano"], ["phone_number", 0], ["email", "justin@lakin.biz"], ["player_number", 6], ["created_at", "2020-11-03 17:58:02.242312"], ["updated_at", "2020-11-03 17:58:02.242312"], ["club_id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chagall"], ["phone_number", 0], ["email", "raina@ryan.biz"], ["player_number", 14], ["created_at", "2020-11-03 17:58:02.246849"], ["updated_at", "2020-11-03 17:58:02.246849"], ["club_id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Botticelli"], ["phone_number", 0], ["email", "dewitt@hintz.com"], ["player_number", 11], ["created_at", "2020-11-03 17:58:02.251775"], ["updated_at", "2020-11-03 17:58:02.251775"], ["club_id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bernini"], ["phone_number", 0], ["email", "forrest@roberts.name"], ["player_number", 2], ["created_at", "2020-11-03 17:58:02.256761"], ["updated_at", "2020-11-03 17:58:02.256761"], ["club_id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Donatello"], ["phone_number", 0], ["email", "isidro_greenfelder@johnson-maggio.net"], ["player_number", 3], ["created_at", "2020-11-03 17:58:02.261124"], ["updated_at", "2020-11-03 17:58:02.261124"], ["club_id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Magritte"], ["phone_number", 0], ["email", "jayne@gutmann.net"], ["player_number", 4], ["created_at", "2020-11-03 17:58:02.265717"], ["updated_at", "2020-11-03 17:58:02.265717"], ["club_id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rubens"], ["phone_number", 0], ["email", "ellan.schuppe@hintz.net"], ["player_number", 6], ["created_at", "2020-11-03 17:58:02.270064"], ["updated_at", "2020-11-03 17:58:02.270064"], ["club_id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Manet"], ["phone_number", 0], ["email", "marcellus@okon.org"], ["player_number", 8], ["created_at", "2020-11-03 17:58:02.275010"], ["updated_at", "2020-11-03 17:58:02.275010"], ["club_id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cassatt"], ["phone_number", 0], ["email", "emory@reichert.org"], ["player_number", 13], ["created_at", "2020-11-03 17:58:02.279778"], ["updated_at", "2020-11-03 17:58:02.279778"], ["club_id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rembrandt"], ["phone_number", 0], ["email", "ismael.collins@bashirian-gislason.io"], ["player_number", 13], ["created_at", "2020-11-03 17:58:02.284091"], ["updated_at", "2020-11-03 17:58:02.284091"], ["club_id", 14]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winslow Homer"], ["phone_number", 0], ["email", "landon@pouros-bogan.name"], ["player_number", 2], ["created_at", "2020-11-03 17:58:02.288901"], ["updated_at", "2020-11-03 17:58:02.288901"], ["club_id", 14]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gauguin"], ["phone_number", 0], ["email", "felica.schimmel@hand-effertz.com"], ["player_number", 1], ["created_at", "2020-11-03 17:58:02.293707"], ["updated_at", "2020-11-03 17:58:02.293707"], ["club_id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pollock"], ["phone_number", 0], ["email", "thaddeus@volkman.name"], ["player_number", 12], ["created_at", "2020-11-03 17:58:02.298633"], ["updated_at", "2020-11-03 17:58:02.298633"], ["club_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Picasso"], ["phone_number", 0], ["email", "wm.mills@sipes.com"], ["player_number", 10], ["created_at", "2020-11-03 17:58:02.303503"], ["updated_at", "2020-11-03 17:58:02.303503"], ["club_id", 15]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rothko"], ["phone_number", 0], ["email", "octavio.abbott@huels-kautzer.net"], ["player_number", 3], ["created_at", "2020-11-03 17:58:02.309225"], ["updated_at", "2020-11-03 17:58:02.309225"], ["club_id", 15]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seurat"], ["phone_number", 0], ["email", "twana.barrows@pacocha-turcotte.name"], ["player_number", 8], ["created_at", "2020-11-03 17:58:02.315590"], ["updated_at", "2020-11-03 17:58:02.315590"], ["club_id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dali"], ["phone_number", 0], ["email", "apolonia@mitchell-pacocha.com"], ["player_number", 17], ["created_at", "2020-11-03 17:58:02.321891"], ["updated_at", "2020-11-03 17:58:02.321891"], ["club_id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.2ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.3ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 26]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 28]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 29]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 32]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 33]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 34]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 35]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 36]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 37]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 38]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 39]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 40]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 41]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 42]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 43]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 44]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 45]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.9ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 46]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 47]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 48]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 49]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 50]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Egypt"], ["city", "Nizhny Novgorod"], ["home_arena", "Volgograd Arena"], ["wins", 4], ["losses", 5], ["created_at", "2020-11-03 17:59:16.944367"], ["updated_at", "2020-11-03 17:59:16.944367"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.4ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Denmark"], ["city", "Samara"], ["home_arena", "Rostov Arena"], ["wins", 3], ["losses", 3], ["created_at", "2020-11-03 17:59:16.948807"], ["updated_at", "2020-11-03 17:59:16.948807"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Belgium"], ["city", "Kaliningrad"], ["home_arena", "Nizhny Novgorod Stadium"], ["wins", 2], ["losses", 2], ["created_at", "2020-11-03 17:59:16.953161"], ["updated_at", "2020-11-03 17:59:16.953161"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.3ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tunisia"], ["city", "Sochi"], ["home_arena", "Kasan Arena"], ["wins", 4], ["losses", 2], ["created_at", "2020-11-03 17:59:16.957216"], ["updated_at", "2020-11-03 17:59:16.957216"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Create (0.4ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nigeria"], ["city", "Samara"], ["home_arena", "Saint Petersburg Stadium"], ["wins", 3], ["losses", 3], ["created_at", "2020-11-03 17:59:16.961219"], ["updated_at", "2020-11-03 17:59:16.961219"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dali"], ["phone_number", 7315570552], ["email", "felix@howell.name"], ["player_number", 2], ["created_at", "2020-11-03 17:59:16.973668"], ["updated_at", "2020-11-03 17:59:16.973668"], ["club_id", 16]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rubens"], ["phone_number", 9616640631], ["email", "stacey@sawayn.name"], ["player_number", 19], ["created_at", "2020-11-03 17:59:16.978695"], ["updated_at", "2020-11-03 17:59:16.978695"], ["club_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "El Greco"], ["phone_number", 4787679169], ["email", "danial_kautzer@murazik.io"], ["player_number", 6], ["created_at", "2020-11-03 17:59:16.983550"], ["updated_at", "2020-11-03 17:59:16.983550"], ["club_id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "El Greco"], ["phone_number", 3338644806], ["email", "derek_schiller@crist-kuhlman.name"], ["player_number", 11], ["created_at", "2020-11-03 17:59:16.998507"], ["updated_at", "2020-11-03 17:59:16.998507"], ["club_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dali"], ["phone_number", 2987356707], ["email", "alysa@hintz.info"], ["player_number", 14], ["created_at", "2020-11-03 17:59:17.004001"], ["updated_at", "2020-11-03 17:59:17.004001"], ["club_id", 16]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kandinsky"], ["phone_number", 6626412339], ["email", "micheal.doyle@leannon-baumbach.com"], ["player_number", 18], ["created_at", "2020-11-03 17:59:17.009150"], ["updated_at", "2020-11-03 17:59:17.009150"], ["club_id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Diego Rivera"], ["phone_number", 7493797661], ["email", "vernita@luettgen-berge.name"], ["player_number", 16], ["created_at", "2020-11-03 17:59:17.013996"], ["updated_at", "2020-11-03 17:59:17.013996"], ["club_id", 17]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winslow Homer"], ["phone_number", 3858740829], ["email", "rayna@weimann-douglas.org"], ["player_number", 8], ["created_at", "2020-11-03 17:59:17.018636"], ["updated_at", "2020-11-03 17:59:17.018636"], ["club_id", 17]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pollock"], ["phone_number", 5156432611], ["email", "lester@turcotte-gusikowski.org"], ["player_number", 11], ["created_at", "2020-11-03 17:59:17.023170"], ["updated_at", "2020-11-03 17:59:17.023170"], ["club_id", 17]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Klimt"], ["phone_number", 4150746831], ["email", "keturah.cole@bogan.name"], ["player_number", 9], ["created_at", "2020-11-03 17:59:17.027935"], ["updated_at", "2020-11-03 17:59:17.027935"], ["club_id", 17]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rothko"], ["phone_number", 1327774228], ["email", "augustus_mckenzie@parker.com"], ["player_number", 5], ["created_at", "2020-11-03 17:59:17.032838"], ["updated_at", "2020-11-03 17:59:17.032838"], ["club_id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winslow Homer"], ["phone_number", 2685789641], ["email", "tony.reilly@runolfsson-schuster.biz"], ["player_number", 17], ["created_at", "2020-11-03 17:59:17.037942"], ["updated_at", "2020-11-03 17:59:17.037942"], ["club_id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Botticelli"], ["phone_number", 8584561472], ["email", "colby@windler.com"], ["player_number", 14], ["created_at", "2020-11-03 17:59:17.043935"], ["updated_at", "2020-11-03 17:59:17.043935"], ["club_id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rubens"], ["phone_number", 9596475020], ["email", "eunice@hartmann.co"], ["player_number", 1], ["created_at", "2020-11-03 17:59:17.049586"], ["updated_at", "2020-11-03 17:59:17.049586"], ["club_id", 18]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Michelangelo"], ["phone_number", 1638618130], ["email", "domenic@homenick-huels.org"], ["player_number", 15], ["created_at", "2020-11-03 17:59:17.054798"], ["updated_at", "2020-11-03 17:59:17.054798"], ["club_id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Botticelli"], ["phone_number", 2171797433], ["email", "hunter_graham@pouros-senger.info"], ["player_number", 4], ["created_at", "2020-11-03 17:59:17.060433"], ["updated_at", "2020-11-03 17:59:17.060433"], ["club_id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rubens"], ["phone_number", 1284163007], ["email", "rickie_prosacco@botsford.io"], ["player_number", 15], ["created_at", "2020-11-03 17:59:17.065083"], ["updated_at", "2020-11-03 17:59:17.065083"], ["club_id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winslow Homer"], ["phone_number", 4197967994], ["email", "johnnie@bayer.com"], ["player_number", 10], ["created_at", "2020-11-03 17:59:17.070134"], ["updated_at", "2020-11-03 17:59:17.070134"], ["club_id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pissarro"], ["phone_number", 8684579918], ["email", "larissa_mcdermott@stokes.io"], ["player_number", 11], ["created_at", "2020-11-03 17:59:17.075612"], ["updated_at", "2020-11-03 17:59:17.075612"], ["club_id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ansel Adams"], ["phone_number", 5783730402], ["email", "roland@bednar.org"], ["player_number", 9], ["created_at", "2020-11-03 17:59:17.081990"], ["updated_at", "2020-11-03 17:59:17.081990"], ["club_id", 19]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kahlo"], ["phone_number", 1991094536], ["email", "elias@purdy-yost.io"], ["player_number", 11], ["created_at", "2020-11-03 17:59:17.089449"], ["updated_at", "2020-11-03 17:59:17.089449"], ["club_id", 20]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Klimt"], ["phone_number", 6933076303], ["email", "marcelino@quitzon.co"], ["player_number", 14], ["created_at", "2020-11-03 17:59:17.095804"], ["updated_at", "2020-11-03 17:59:17.095804"], ["club_id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Botticelli"], ["phone_number", 2140947101], ["email", "melania.hyatt@stroman-moen.net"], ["player_number", 18], ["created_at", "2020-11-03 17:59:17.100876"], ["updated_at", "2020-11-03 17:59:17.100876"], ["club_id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pissarro"], ["phone_number", 7413019795], ["email", "alphonse@stoltenberg-moore.org"], ["player_number", 4], ["created_at", "2020-11-03 17:59:17.105960"], ["updated_at", "2020-11-03 17:59:17.105960"], ["club_id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Botticelli"], ["phone_number", 6990641241], ["email", "zachery@von-rowe.io"], ["player_number", 17], ["created_at", "2020-11-03 17:59:17.111165"], ["updated_at", "2020-11-03 17:59:17.111165"], ["club_id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
