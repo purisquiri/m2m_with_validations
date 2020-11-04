@@ -1,3 +1,10 @@
+<%if @club.errors.any?%>
+
+    <%@club.errors.full_messages.each do |msg|%>
+        <div><%= msg%></div>
+    <%end%><br>
+<%end%>  
+
 <%=form_for @club do |f|%><br>
 <%=f.label :name%><br>
 <%=f.text_field :name%><br>

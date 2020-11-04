@@ -26,11 +26,14 @@ class ClubsController < ApplicationController
   def edit
     @club = Club.find(params[:id])
   end
-
+ 
   def update
-    @club = Club.find(params[:id])
-    @club.update(club_params)
-    redirect_to club_path(@club)
+     @club = Club.find(params[:id])
+     if @club.update(club_params)
+       redirect_to club_path(@club)
+     else
+       render :edit
+     end
   end
 
   def destroy

@@ -1,9 +1,3 @@
 <h1>Clubs#new</h1>
 
-<%if @club.errors.any?%>
-
-    <%@club.errors.full_messages.each do |msg|%>
-        <div><%= msg%></div>
-    <%end%><br>
-<%end%>    
 <%=render partial: 'club_form'%>

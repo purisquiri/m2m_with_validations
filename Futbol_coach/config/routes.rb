@@ -3,5 +3,5 @@ Rails.application.routes.draw do
  get '/about', to: 'application#about', as: 'about' 
 
  resources :clubs
- 
+ resources :players
 end
