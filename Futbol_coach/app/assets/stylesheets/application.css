@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .navbar{
+     
+     background-color: grey;
+     text-align: center;
+     padding: 5px;
+     font-size: 32px;
+    }
+    
+    .navbar a{
+     text-decoration: none;
+    }
+
+    body{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSl7dkDMX7-7NKo9pdjXNavjvttlGwUlIIIG5B79o-RwaJrd4evrZEeXVOVw3x9joSk0TVLYaLj&usqp=CAc");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
