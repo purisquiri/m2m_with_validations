@@ -1,0 +1,21 @@
+<%if @player.errors.any?%>
+<%@player.errors.full_messages.each do |message|%>
+    <div><%=message%></div>
+    <% end %>
+<% end %>
+
+
+<%= form_for @player do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :phone_number %>
+        <%= f.phone_field :phone_number %>
+        <%= f.label :email %>
+        <%= f.email_field :email, required:true %>
+        <%= f.label :player_number %>
+        <%= f.number_field :player_number %>
+        <%= f.label :club_id, "Team" %>
+        <%= f.collection_select :club_id, Club.all, :id, :name %>
+    <!--         object (optional b/c of line 4), method, collection, value_method, text_method-->
+        <%= f.submit %>
+<% end %>

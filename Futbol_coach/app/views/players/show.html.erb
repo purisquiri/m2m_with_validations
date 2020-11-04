@@ -1,2 +1,14 @@
-<h1>Players#show</h1>
-<p>Find me in app/views/players/show.html.erb</p>
+<h1><%=@player.name%></h1>
+
+<h3>Contact Info</h3>
+<div>
+    <%=@player.phone_number%><br>
+    <%=@player.email%><br>
+    <%=@player.club.name%><br>
+</div>
+
+<%=link_to "Return to Club Page", club_path(@player.club_id)%>
+
+<br><br>
+
+<%= button_to "Delete Player", @player, method: "delete"%>

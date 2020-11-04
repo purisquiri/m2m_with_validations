@@ -2769,3 +2769,1938 @@ Processing by ClubsController#update as HTML
 Completed 200 OK in 105ms (Views: 44.6ms | ActiveRecord: 3.2ms | Allocations: 16340)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.7ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 16]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.8ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 18]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.5ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.6ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.6ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.8ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.5ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Destroy (0.5ms)[0m  [1m[31mDELETE FROM "clubs" WHERE "clubs"."id" = ?[0m  [["id", 25]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (1.0ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 51]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 52]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 53]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 54]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 55]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 56]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 57]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 58]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 59]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 60]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 61]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 62]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 63]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 64]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 65]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 66]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (1.0ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 67]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 68]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 69]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 70]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 71]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 72]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 73]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 74]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 75]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clubs" WHERE LOWER("clubs"."name") = LOWER(?) LIMIT ?[0m  [["name", "Peru"], ["LIMIT", 1]]
+  [1m[36mClub Create (1.0ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Peru"], ["city", "Kazan"], ["home_arena", "Kaliningrad Stadium"], ["wins", 2], ["losses", 2], ["created_at", "2020-11-04 20:19:32.498685"], ["updated_at", "2020-11-04 20:19:32.498685"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clubs" WHERE LOWER("clubs"."name") = LOWER(?) LIMIT ?[0m  [["name", "Poland"], ["LIMIT", 1]]
+  [1m[36mClub Create (0.5ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Poland"], ["city", "Moscow"], ["home_arena", "Luzhniki Stadium"], ["wins", 2], ["losses", 5], ["created_at", "2020-11-04 20:19:32.509333"], ["updated_at", "2020-11-04 20:19:32.509333"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clubs" WHERE LOWER("clubs"."name") = LOWER(?) LIMIT ?[0m  [["name", "Belgium"], ["LIMIT", 1]]
+  [1m[36mClub Create (0.5ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Belgium"], ["city", "Ekaterinburg"], ["home_arena", "Kaliningrad Stadium"], ["wins", 4], ["losses", 5], ["created_at", "2020-11-04 20:19:32.518290"], ["updated_at", "2020-11-04 20:19:32.518290"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clubs" WHERE LOWER("clubs"."name") = LOWER(?) LIMIT ?[0m  [["name", "Serbia"], ["LIMIT", 1]]
+  [1m[36mClub Create (0.4ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Serbia"], ["city", "Volgograd"], ["home_arena", "Mordovia Arena"], ["wins", 2], ["losses", 5], ["created_at", "2020-11-04 20:19:32.528026"], ["updated_at", "2020-11-04 20:19:32.528026"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clubs" WHERE LOWER("clubs"."name") = LOWER(?) LIMIT ?[0m  [["name", "Egypt"], ["LIMIT", 1]]
+  [1m[36mClub Create (0.8ms)[0m  [1m[32mINSERT INTO "clubs" ("name", "city", "home_arena", "wins", "losses", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Egypt"], ["city", "Samara"], ["home_arena", "Volgograd Arena"], ["wins", 3], ["losses", 2], ["created_at", "2020-11-04 20:19:32.536386"], ["updated_at", "2020-11-04 20:19:32.536386"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Paul Klee"], ["phone_number", 4661745137], ["email", "elliott.davis@wuckert.name"], ["player_number", 17], ["created_at", "2020-11-04 20:19:32.573877"], ["updated_at", "2020-11-04 20:19:32.573877"], ["club_id", 26]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gauguin"], ["phone_number", 3713123162], ["email", "clemmie.carter@moore-ortiz.net"], ["player_number", 3], ["created_at", "2020-11-04 20:19:32.585141"], ["updated_at", "2020-11-04 20:19:32.585141"], ["club_id", 26]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vincent"], ["phone_number", 6758577374], ["email", "emile@cassin.info"], ["player_number", 4], ["created_at", "2020-11-04 20:19:32.595828"], ["updated_at", "2020-11-04 20:19:32.595828"], ["club_id", 26]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Degas"], ["phone_number", 6974378077], ["email", "solange.watsica@gislason-crooks.name"], ["player_number", 10], ["created_at", "2020-11-04 20:19:32.609608"], ["updated_at", "2020-11-04 20:19:32.609608"], ["club_id", 26]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rothko"], ["phone_number", 8372054636], ["email", "darnell@christiansen.io"], ["player_number", 16], ["created_at", "2020-11-04 20:19:32.621499"], ["updated_at", "2020-11-04 20:19:32.621499"], ["club_id", 26]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Picasso"], ["phone_number", 9649671571], ["email", "conception@russel.name"], ["player_number", 19], ["created_at", "2020-11-04 20:19:32.633358"], ["updated_at", "2020-11-04 20:19:32.633358"], ["club_id", 27]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Titian"], ["phone_number", 9710238933], ["email", "anderson@stehr.biz"], ["player_number", 17], ["created_at", "2020-11-04 20:19:32.646223"], ["updated_at", "2020-11-04 20:19:32.646223"], ["club_id", 27]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.9ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Edward Hopper"], ["phone_number", 2321996279], ["email", "dottie@jaskolski-skiles.co"], ["player_number", 6], ["created_at", "2020-11-04 20:19:32.657828"], ["updated_at", "2020-11-04 20:19:32.657828"], ["club_id", 27]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.8ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Escher"], ["phone_number", 8105864092], ["email", "elke.brown@thiel.net"], ["player_number", 13], ["created_at", "2020-11-04 20:19:32.671273"], ["updated_at", "2020-11-04 20:19:32.671273"], ["club_id", 27]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Picasso"], ["phone_number", 2966936497], ["email", "jewel@rice.info"], ["player_number", 6], ["created_at", "2020-11-04 20:19:32.684476"], ["updated_at", "2020-11-04 20:19:32.684476"], ["club_id", 27]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.7ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Da Vinci"], ["phone_number", 6049740870], ["email", "lai.ankunding@luettgen.com"], ["player_number", 4], ["created_at", "2020-11-04 20:19:32.697497"], ["updated_at", "2020-11-04 20:19:32.697497"], ["club_id", 28]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Matisse"], ["phone_number", 1177912608], ["email", "bennett@jacobs.biz"], ["player_number", 11], ["created_at", "2020-11-04 20:19:32.712261"], ["updated_at", "2020-11-04 20:19:32.712261"], ["club_id", 28]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.7ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Renoir"], ["phone_number", 5501042878], ["email", "nida@kiehn.name"], ["player_number", 3], ["created_at", "2020-11-04 20:19:32.725740"], ["updated_at", "2020-11-04 20:19:32.725740"], ["club_id", 28]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mPlayer Create (1.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Da Vinci"], ["phone_number", 1989730066], ["email", "javier.kilback@williamson.net"], ["player_number", 8], ["created_at", "2020-11-04 20:19:32.741486"], ["updated_at", "2020-11-04 20:19:32.741486"], ["club_id", 28]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.8ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rothko"], ["phone_number", 4887507879], ["email", "shae_hauck@jakubowski.info"], ["player_number", 1], ["created_at", "2020-11-04 20:19:32.755618"], ["updated_at", "2020-11-04 20:19:32.755618"], ["club_id", 28]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.9ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "El Greco"], ["phone_number", 2982267161], ["email", "margaretta@bartell.io"], ["player_number", 8], ["created_at", "2020-11-04 20:19:32.806324"], ["updated_at", "2020-11-04 20:19:32.806324"], ["club_id", 29]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mPlayer Create (1.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Munch"], ["phone_number", 3615292792], ["email", "long.smith@okon.biz"], ["player_number", 8], ["created_at", "2020-11-04 20:19:32.825658"], ["updated_at", "2020-11-04 20:19:32.825658"], ["club_id", 29]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mPlayer Create (2.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Monet"], ["phone_number", 3712038643], ["email", "marlyn.lowe@damore.name"], ["player_number", 3], ["created_at", "2020-11-04 20:19:32.853641"], ["updated_at", "2020-11-04 20:19:32.853641"], ["club_id", 29]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mPlayer Create (1.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rembrandt"], ["phone_number", 1929493633], ["email", "ebony@ledner-marquardt.biz"], ["player_number", 5], ["created_at", "2020-11-04 20:19:32.889563"], ["updated_at", "2020-11-04 20:19:32.889563"], ["club_id", 29]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.9ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Titian"], ["phone_number", 7726769440], ["email", "annett.langworth@kessler.name"], ["player_number", 12], ["created_at", "2020-11-04 20:19:32.928338"], ["updated_at", "2020-11-04 20:19:32.928338"], ["club_id", 29]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mPlayer Create (1.1ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kahlo"], ["phone_number", 6498504464], ["email", "frances@baumbach.info"], ["player_number", 6], ["created_at", "2020-11-04 20:19:32.950389"], ["updated_at", "2020-11-04 20:19:32.950389"], ["club_id", 30]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.8ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Diego Rivera"], ["phone_number", 6758273579], ["email", "dolores@carroll-witting.co"], ["player_number", 14], ["created_at", "2020-11-04 20:19:32.968647"], ["updated_at", "2020-11-04 20:19:32.968647"], ["club_id", 30]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.7ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Durer"], ["phone_number", 5463809455], ["email", "tinisha_bradtke@huels.name"], ["player_number", 16], ["created_at", "2020-11-04 20:19:32.984774"], ["updated_at", "2020-11-04 20:19:32.984774"], ["club_id", 30]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.7ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cezanne"], ["phone_number", 5554482617], ["email", "lavona@prosacco.biz"], ["player_number", 4], ["created_at", "2020-11-04 20:19:32.998375"], ["updated_at", "2020-11-04 20:19:32.998375"], ["club_id", 30]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Titian"], ["phone_number", 8924618456], ["email", "filomena_christiansen@conn-beatty.co"], ["player_number", 4], ["created_at", "2020-11-04 20:19:33.012492"], ["updated_at", "2020-11-04 20:19:33.012492"], ["club_id", 30]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/clubs/" for ::1 at 2020-11-04 15:23:26 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClubsController#index as HTML
+  Rendering clubs/index.html.erb within layouts/application
+  [1m[36mClub Load (1.0ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/clubs/index.html.erb:4
+  Rendered clubs/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 6841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 228ms (Views: 203.2ms | ActiveRecord: 2.4ms | Allocations: 35526)
+
+
+Started GET "/players" for ::1 at 2020-11-04 15:23:32 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  Rendered players/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 4816)
+
+
+Started GET "/players/1" for ::1 at 2020-11-04 15:30:30 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 5174)
+
+
+Started GET "/players/1" for ::1 at 2020-11-04 15:30:49 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 4343)
+
+
+Started GET "/players/2" for ::1 at 2020-11-04 15:31:02 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 4167)
+
+
+Started GET "/players/2" for ::1 at 2020-11-04 15:31:35 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+Completed 404 Not Found in 27ms (ActiveRecord: 3.4ms | Allocations: 3217)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=2):
+  
+app/controllers/players_controller.rb:14:in `show'
+Started GET "/players/77" for ::1 at 2020-11-04 15:31:50 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 9828)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+Started GET "/players/77" for ::1 at 2020-11-04 15:35:05 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:6
+  Rendered players/show.html.erb within layouts/application (Duration: 61.2ms | Allocations: 10906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 92.3ms | ActiveRecord: 3.0ms | Allocations: 16460)
+
+
+Started GET "/players/77" for ::1 at 2020-11-04 15:36:17 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:6
+  Rendered players/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 22.5ms | ActiveRecord: 1.0ms | Allocations: 6559)
+
+
+Started GET "/players/77" for ::1 at 2020-11-04 15:36:28 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 40.4ms | ActiveRecord: 1.2ms | Allocations: 6546)
+
+
+Started GET "/players/77" for ::1 at 2020-11-04 15:36:44 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 893)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.6ms | Allocations: 6541)
+
+
+Started GET "/players/77" for ::1 at 2020-11-04 15:38:10 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.9ms | Allocations: 6608)
+
+
+Started GET "/clubs/26" for ::1 at 2020-11-04 15:38:12 -0500
+Processing by ClubsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/clubs_controller.rb:7:in `show'
+  Rendering clubs/show.html.erb within layouts/application
+  Rendered clubs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 339)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 0.5ms | Allocations: 5673)
+
+
+Started GET "/clubs/26" for ::1 at 2020-11-04 15:38:16 -0500
+Processing by ClubsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/clubs_controller.rb:7:in `show'
+  Rendering clubs/show.html.erb within layouts/application
+  Rendered clubs/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 4816)
+
+
+Started GET "/clubs/" for ::1 at 2020-11-04 15:39:00 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ClubsController#index as HTML
+  Rendering clubs/index.html.erb within layouts/application
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/clubs/index.html.erb:4
+  Rendered clubs/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 6429)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 46.5ms | ActiveRecord: 1.5ms | Allocations: 11850)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 15:39:11 -0500
+  
+SyntaxError (/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/controllers/players_controller.rb:19: syntax error, unexpected end
+  end
+  ^~~
+/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/controllers/players_controller.rb:35: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/players_controller.rb:19: syntax error, unexpected end
+app/controllers/players_controller.rb:35: syntax error, unexpected end-of-input, expecting end
+app/controllers/players_controller.rb:19: syntax error, unexpected end
+app/controllers/players_controller.rb:35: syntax error, unexpected end-of-input, expecting end
+app/controllers/players_controller.rb:19: syntax error, unexpected end
+app/controllers/players_controller.rb:35: syntax error, unexpected end-of-input, expecting end
+Started GET "/players/new" for ::1 at 2020-11-04 15:39:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 0.7ms | Allocations: 10496)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 15:45:17 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1139)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2487)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Create a Player!</h1>
+
+<div>
+    <% form_for @player do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :phone_number %>
+        <%= f.number_field :phone_number %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+        
+</div>
+
+):
+1:    <h1>Create a Player!</h1>
+2:    
+3:    <div>
+4:        <% form_for @player do |f| %>
+5:            <%= f.label :name %>
+6:            <%= f.text_field :name %>
+7:            <%= f.label :phone_number %>
+8:            <%= f.number_field :phone_number %>
+9:            <%= f.label :email %>
+10:            <%= f.email_field :email %>
+11:            
+12:    </div>
+  
+app/views/players/new.html.erb:15: syntax error, unexpected end-of-input, expecting end
+app/views/players/new.html.erb:15: syntax error, unexpected end-of-input, expecting end
+app/views/players/new.html.erb:15: syntax error, unexpected end-of-input, expecting end
+app/views/players/new.html.erb:15: syntax error, unexpected end-of-input, expecting end
+app/views/players/new.html.erb:15: syntax error, unexpected end-of-input, expecting end
+app/views/players/new.html.erb:15: syntax error, unexpected end-of-input, expecting end
+Started GET "/players/new" for ::1 at 2020-11-04 15:45:31 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 561.5ms | Allocations: 201172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 592ms (Views: 587.0ms | ActiveRecord: 0.0ms | Allocations: 206210)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 15:45:38 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 6134)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 15:46:47 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2678)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 4020)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "address":String):
+     7:         <%= f.label :phone_number %>
+     8:         <%= f.number_field :phone_number %>
+     9:         <%= f.label :email %>
+    10:         <%= f.email_field("user", "address") %>
+    11:         <% end %>
+    12: </div>
+  
+app/views/players/new.html.erb:10
+app/views/players/new.html.erb:4
+Started GET "/players/new" for ::1 at 2020-11-04 15:49:18 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2198)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3546)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :email:Symbol):
+     7:         <%= f.label :phone_number %>
+     8:         <%= f.number_field :phone_number %>
+     9:         <%= f.label :email %>
+    10:         <%= f.email_field(@player, :email) %>
+    11:         <% end %>
+    12: </div>
+  
+app/views/players/new.html.erb:10
+app/views/players/new.html.erb:4
+Started GET "/players/new" for ::1 at 2020-11-04 15:50:41 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.0ms | Allocations: 6134)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 15:53:34 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1234)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2582)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Create a Player!</h1>
+
+<div>
+    <%= form_for @player do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :phone_number %>
+        <%= f.number_field :phone_number %>
+        <%= f.label :email %>
+        <%= f.email_field :email, required:true %>
+        <%= f.label :player_number %>
+        <%= f.number_field :player_number %>
+        <%= f.label :club_id, "Team" %>
+        <%= f.collection_select :%>
+        <% end %>
+</div>
+
+):
+1:    <h1>Create a Player!</h1>
+2:    
+3:    <div>
+4:        <%= form_for @player do |f| %>
+5:            <%= f.label :name %>
+6:            <%= f.text_field :name %>
+7:            <%= f.label :phone_number %>
+8:            <%= f.number_field :phone_number %>
+9:            <%= f.label :email %>
+10:            <%= f.email_field :email, required:true %>
+11:            <%= f.label :player_number %>
+12:            <%= f.number_field :player_number %>
+13:            <%= f.label :club_id, "Team" %>
+14:            <%= f.collection_select :%>
+15:            <% end %>
+16:    </div>
+  
+app/views/players/new.html.erb:14: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/players/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:14: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/players/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:14: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/players/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:14: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/players/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:14: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/players/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:14: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/players/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/players/new.html.erb:19: syntax error, unexpected end, expecting ')'
+Started GET "/players/new" for ::1 at 2020-11-04 15:56:30 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 38.7ms | Allocations: 5499)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 6846)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+    11:         <%= f.label :player_number %>
+    12:         <%= f.number_field :player_number %>
+    13:         <%= f.label :club_id, "Team" %>
+    14:         <%= f.collection_select :player, :club_id, Club.all, :id, :name %>
+    15:     <!--         object, method, collection, value_method, text_method-->
+    16:         <%= f.submit %>
+    17:         <% end %>
+  
+app/views/players/new.html.erb:14
+app/views/players/new.html.erb:4
+Started GET "/players/new" for ::1 at 2020-11-04 15:58:56 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (1.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/new.html.erb:14
+  Rendered players/new.html.erb within layouts/application (Duration: 120.9ms | Allocations: 10206)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 297ms (Views: 289.7ms | ActiveRecord: 4.2ms | Allocations: 15237)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:00:26 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"I9uNf51SCFQCoxnKcCfzbkmYQemijxeJg9pOi909cevZ43JxsKnc2P549TiSS/XRLPbPvtFKAk805JryFsYfpg==", "player"=>{"name"=>"Lionel Messi", "phone_number"=>"83937210748", "email"=>"lionel@messi.com", "player_number"=>"10", "club_id"=>"28"}, "commit"=>"Create Player"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1159)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/players_controller.rb:4:in `create'
+Started POST "/players" for ::1 at 2020-11-04 16:00:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"I9uNf51SCFQCoxnKcCfzbkmYQemijxeJg9pOi909cevZ43JxsKnc2P549TiSS/XRLPbPvtFKAk805JryFsYfpg==", "player"=>{"name"=>"Lionel Messi", "phone_number"=>"83937210748", "email"=>"lionel@messi.com", "player_number"=>"10", "club_id"=>"28"}, "commit"=>"Create Player"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Create (1.7ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lionel Messi"], ["phone_number", 83937210748], ["email", "lionel@messi.com"], ["player_number", 10], ["created_at", "2020-11-04 21:00:53.982013"], ["updated_at", "2020-11-04 21:00:53.982013"], ["club_id", 28]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:5:in `create'
+Redirected to http://localhost:3000/players/101
+Completed 302 Found in 92ms (ActiveRecord: 7.9ms | Allocations: 17100)
+
+
+Started GET "/players/101" for ::1 at 2020-11-04 16:00:54 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:14:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1954)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 44.9ms | ActiveRecord: 0.8ms | Allocations: 9792)
+
+
+Started GET "/players/101" for ::1 at 2020-11-04 16:01:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (1.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 118.1ms | Allocations: 7520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 178ms (Views: 136.5ms | ActiveRecord: 6.3ms | Allocations: 18340)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:02:13 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/new.html.erb:14
+  Rendered players/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2478)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.4ms | Allocations: 6791)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:02:41 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"/Cy8/MlM/SH+AFRWD+1PyD6zbhyDrwhQUwSITp533uwGFEPy5LcprQLbuKTtgUl3W93gS/BqHZbkOlw3VYywoQ==", "player"=>{"name"=>"Christiano Ronaldo", "phone_number"=>"092830498", "email"=>"christiano@ronaldo.com", "player_number"=>"8", "club_id"=>"26"}, "commit"=>"Create Player"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:4:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:4:in `create'
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christiano Ronaldo"], ["phone_number", 92830498], ["email", "christiano@ronaldo.com"], ["player_number", 8], ["created_at", "2020-11-04 21:02:41.171208"], ["updated_at", "2020-11-04 21:02:41.171208"], ["club_id", 26]]
+  ↳ app/controllers/players_controller.rb:4:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:4:in `create'
+Redirected to http://localhost:3000/players/102
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms | Allocations: 4174)
+
+
+Started GET "/players/102" for ::1 at 2020-11-04 16:02:41 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.4ms | Allocations: 5484)
+
+
+Started GET "/players/102" for ::1 at 2020-11-04 16:04:44 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 946)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.6ms | Allocations: 6593)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:04:50 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1023)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1758)
+
+
+  
+ActionView::Template::Error (You invoked render but did not give any of :partial, :template, :inline, :file, :plain, :html or :body option.):
+    1: <h1>Create a Player!</h1>
+    2: 
+    3: <div>
+    4:     <%= render patial: "player_form" %>
+    5: </div>
+  
+app/views/players/new.html.erb:4
+Started GET "/players/new" for ::1 at 2020-11-04 16:04:58 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1017)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2355)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Create a Player!</h1>
+
+<div>
+    <%= render :patial "player_form" %>
+</div>
+
+):
+1:    <h1>Create a Player!</h1>
+2:    
+3:    <div>
+4:        <%= render :patial "player_form" %>
+5:    </div>
+  
+app/views/players/new.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/players/new.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/players/new.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/players/new.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/players/new.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/players/new.html.erb:4: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/players/new" for ::1 at 2020-11-04 16:05:09 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 14.2ms | Allocations: 2355)
+  Rendered players/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2668)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 49.5ms | ActiveRecord: 0.5ms | Allocations: 7786)
+
+
+Started GET "/players/78" for ::1 at 2020-11-04 16:07:44 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 130.8ms | Allocations: 7712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 214ms (Views: 148.6ms | ActiveRecord: 6.8ms | Allocations: 18715)
+
+
+Started GET "/players/78edit" for ::1 at 2020-11-04 16:07:49 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"78edit"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `show'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 5478)
+
+
+Started GET "/players/78/edit" for ::1 at 2020-11-04 16:07:52 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:17:in `edit'
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 4930)
+
+
+Started GET "/players/78/edit" for ::1 at 2020-11-04 16:08:44 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:17:in `edit'
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 12.1ms | Allocations: 2514)
+  Rendered players/edit.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2825)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.6ms | Allocations: 8474)
+
+
+Started GET "/players/78/edit" for ::1 at 2020-11-04 16:08:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:17:in `edit'
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mClub Load (0.6ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 35.9ms | Allocations: 8231)
+  Rendered players/edit.html.erb within layouts/application (Duration: 36.5ms | Allocations: 8296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 52.7ms | ActiveRecord: 4.8ms | Allocations: 19169)
+
+
+Started GET "/players/80/edit" for ::1 at 2020-11-04 16:09:04 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"80"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:17:in `edit'
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 3.8ms | Allocations: 2122)
+  Rendered players/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 6890)
+
+
+Started PATCH "/players/80" for ::1 at 2020-11-04 16:09:32 -0500
+Processing by PlayersController#update as HTML
+  Parameters: {"authenticity_token"=>"gvwdohkgoGTv8+sKCeT6Y2TOYbV82CKDUUEvrT156+x4xOKsNNt06BMoB/jriPzcAaDv4g8dN0Xmf/vU9oKFoQ==", "player"=>{"name"=>"Rothko", "phone_number"=>"8372054636", "email"=>"fakemail@gmail.com", "player_number"=>"16", "club_id"=>"26"}, "commit"=>"Update Player", "id"=>"80"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1241)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/players_controller.rb:22:in `update'
+Started PATCH "/players/80" for ::1 at 2020-11-04 16:10:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#update as HTML
+  Parameters: {"authenticity_token"=>"gvwdohkgoGTv8+sKCeT6Y2TOYbV82CKDUUEvrT156+x4xOKsNNt06BMoB/jriPzcAaDv4g8dN0Xmf/vU9oKFoQ==", "player"=>{"name"=>"Rothko", "phone_number"=>"8372054636", "email"=>"fakemail@gmail.com", "player_number"=>"9", "club_id"=>"26"}, "commit"=>"Update Player", "id"=>"80"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:21:in `update'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:21:in `update'
+  [1m[36mPlayer Update (0.7ms)[0m  [1m[33mUPDATE "players" SET "email" = ?, "player_number" = ?, "updated_at" = ? WHERE "players"."id" = ?[0m  [["email", "fakemail@gmail.com"], ["player_number", 9], ["updated_at", "2020-11-04 21:10:04.663391"], ["id", 80]]
+  ↳ app/controllers/players_controller.rb:21:in `update'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:21:in `update'
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 5.9ms | Allocations: 18374)
+
+
+  
+NoMethodError (undefined method `empty?' for true:TrueClass):
+  
+app/controllers/players_controller.rb:22:in `update'
+Started GET "/players/80/edit" for ::1 at 2020-11-04 16:11:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"80"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37:in `find_player'
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 34.4ms | Allocations: 8231)
+  Rendered players/edit.html.erb within layouts/application (Duration: 35.0ms | Allocations: 8296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 53.7ms | ActiveRecord: 3.6ms | Allocations: 19193)
+
+
+Started PATCH "/players/80" for ::1 at 2020-11-04 16:11:30 -0500
+Processing by PlayersController#update as HTML
+  Parameters: {"authenticity_token"=>"Zfm/zOlNC2IiEnmsPDmHMTZifSB5d1dWkIJCU/S/FNSfwUDCxLbf7t7JlV7eVYGOUwzzdwqyQpAnvJYqP0R6mQ==", "player"=>{"name"=>"Rothko", "phone_number"=>"987987", "email"=>"fakemail@gmail.com", "player_number"=>"9", "club_id"=>"26"}, "commit"=>"Update Player", "id"=>"80"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37:in `find_player'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:22:in `update'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:22:in `update'
+  [1m[36mPlayer Update (0.6ms)[0m  [1m[33mUPDATE "players" SET "phone_number" = ?, "updated_at" = ? WHERE "players"."id" = ?[0m  [["phone_number", 987987], ["updated_at", "2020-11-04 21:11:30.805160"], ["id", 80]]
+  ↳ app/controllers/players_controller.rb:22:in `update'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:22:in `update'
+Redirected to http://localhost:3000/players/80
+Completed 302 Found in 12ms (ActiveRecord: 2.2ms | Allocations: 5583)
+
+
+Started GET "/players/80" for ::1 at 2020-11-04 16:11:30 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"80"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.6ms | Allocations: 5783)
+
+
+Started GET "/" for ::1 at 2020-11-04 16:12:09 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.html.erb within layouts/application
+  Rendered application/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 86)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 0.0ms | Allocations: 4514)
+
+
+Started GET "/players" for ::1 at 2020-11-04 16:12:33 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/players/82" for ::1 at 2020-11-04 16:12:39 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 788)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 5488)
+
+
+Started GET "/players/82" for ::1 at 2020-11-04 16:16:38 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.7ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 54.9ms | Allocations: 9369)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 5.7ms | Allocations: 17325)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "delete":String):
+    11: 
+    12: <br><br>
+    13: 
+    14: <%= button_to "Delete Player", @player, method="delete"%>
+  
+app/views/players/show.html.erb:14
+Started GET "/rails/info/routes" for ::1 at 2020-11-04 16:16:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/benjaminhessel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/benjaminhessel/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [38 times] (Duration: 23.7ms | Allocations: 5342)
+  Rendered /Users/benjaminhessel/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 6.8ms | Allocations: 923)
+  Rendered /Users/benjaminhessel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 38.8ms | Allocations: 9487)
+Completed 200 OK in 49ms (Views: 42.7ms | ActiveRecord: 0.0ms | Allocations: 11363)
+
+
+Started GET "/players/82" for ::1 at 2020-11-04 16:17:45 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:39:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 37.4ms | Allocations: 7901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 66.5ms | ActiveRecord: 7.1ms | Allocations: 19544)
+
+
+Started DELETE "/players/82" for ::1 at 2020-11-04 16:17:50 -0500
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Aso1AJZR1FUGdcjjMNTAscptEuOMmniPDYHaCyIBbMz48soOu6oA2fquJBHSuMYOrwOctP9fbUm6vw5y6foCgQ==", "id"=>"82"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:39:in `find_player'
+  [1m[36mPlayer Destroy (1.1ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 82]]
+  ↳ app/controllers/players_controller.rb:27:in `destroy'
+Redirected to http://localhost:3000/clubs
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms | Allocations: 1468)
+
+
+Started GET "/clubs" for ::1 at 2020-11-04 16:17:50 -0500
+Processing by ClubsController#index as HTML
+  Rendering clubs/index.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/clubs/index.html.erb:4
+  Rendered clubs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 5753)
+
+
+Started GET "/players/82" for ::1 at 2020-11-04 16:17:59 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:39:in `find_player'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1276)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=82):
+  
+app/controllers/players_controller.rb:39:in `find_player'
+app/controllers/players_controller.rb:13:in `show'
+Started GET "/players/83" for ::1 at 2020-11-04 16:20:46 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 26.9ms | Allocations: 7902)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 47.4ms | ActiveRecord: 2.9ms | Allocations: 19554)
+
+
+Started GET "/players/83" for ::1 at 2020-11-04 16:21:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 33.3ms | Allocations: 7717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 50.8ms | ActiveRecord: 4.4ms | Allocations: 18570)
+
+
+Started DELETE "/players/83" for ::1 at 2020-11-04 16:21:25 -0500
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hZunl2JvFIG4sPU4K8j0CLfG3g6Y90j9eXkyoczbJbt/o1iZT5TADURrGcrJpPK30qhQWesyXTvOR+bYByBL9g==", "id"=>"83"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  [1m[36mPlayer Destroy (1.0ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 83]]
+  ↳ app/controllers/players_controller.rb:27:in `destroy'
+Redirected to http://localhost:3000/players
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms | Allocations: 1455)
+
+
+Started GET "/players" for ::1 at 2020-11-04 16:21:25 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2009)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 2741)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"players", :id=>nil}, missing required keys: [:id]):
+    2: 
+    3: <div>
+    4:     <% @players.each do |player|%>
+    5:     <div><%= link_to player.name, player_path(@player) %></div>
+    6:     <% end %>
+    7: </div>
+  
+app/views/players/index.html.erb:5
+app/views/players/index.html.erb:4
+Started GET "/players/83" for ::1 at 2020-11-04 16:21:44 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1266)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=83):
+  
+app/controllers/players_controller.rb:44:in `find_player'
+app/controllers/players_controller.rb:13:in `show'
+Started GET "/players/84" for ::1 at 2020-11-04 16:21:50 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 6761)
+
+
+Started GET "/players/" for ::1 at 2020-11-04 16:24:00 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2313)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms | Allocations: 3650)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    2: 
+    3: <div>
+    4:     <% @players.each do |player|%>
+    5:     <div><%= link_to player.name, player_path(@player.id) %></div>
+    6:     <% end %>
+    7: </div>
+  
+app/views/players/index.html.erb:5
+app/views/players/index.html.erb:4
+Started GET "/players/" for ::1 at 2020-11-04 16:24:08 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2166)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms | Allocations: 2767)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    2: 
+    3: <div>
+    4:     <% @players.each do |player|%>
+    5:     <div><%= link_to player.name, player_path(@player) %></div>
+    6:     <% end %>
+    7: </div>
+  
+app/views/players/index.html.erb:5
+app/views/players/index.html.erb:4
+Started GET "/players/" for ::1 at 2020-11-04 16:24:25 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.2ms | Allocations: 6828)
+
+
+Started GET "/players/102" for ::1 at 2020-11-04 16:24:30 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 0.5ms | Allocations: 5959)
+
+
+Started DELETE "/players/102" for ::1 at 2020-11-04 16:24:45 -0500
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K5Q+H9GSQJBkSz2yzPuKhA8Ss52hjxL5nxouZVt6m+ch4/Zgp4ECWJ80tEVgHZ33istGhiG/ujlHviuL+ZWNNg==", "id"=>"102"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  [1m[36mPlayer Destroy (1.9ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 102]]
+  ↳ app/controllers/players_controller.rb:27:in `destroy'
+Redirected to http://localhost:3000/players
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms | Allocations: 1488)
+
+
+Started GET "/players" for ::1 at 2020-11-04 16:24:45 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 5689)
+
+
+Started GET "/players/79" for ::1 at 2020-11-04 16:25:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"79"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1276)
+
+
+  
+SyntaxError (/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:3: syntax error, unexpected ':', expecting end
+    validates :
+              ^):
+  
+app/models/player.rb:3: syntax error, unexpected ':', expecting end
+app/models/player.rb:3: syntax error, unexpected ':', expecting end
+app/models/player.rb:3: syntax error, unexpected ':', expecting end
+app/controllers/players_controller.rb:44:in `find_player'
+app/controllers/players_controller.rb:13:in `show'
+Started GET "/players" for ::1 at 2020-11-04 16:25:48 -0500
+Processing by PlayersController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1306)
+
+
+  
+SyntaxError (/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:3: syntax error, unexpected ':', expecting end
+    validates :
+              ^):
+  
+app/models/player.rb:3: syntax error, unexpected ':', expecting end
+app/models/player.rb:3: syntax error, unexpected ':', expecting end
+app/models/player.rb:3: syntax error, unexpected ':', expecting end
+app/controllers/players_controller.rb:32:in `index'
+Started GET "/players/102" for ::1 at 2020-11-04 16:25:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+Completed 404 Not Found in 34ms (ActiveRecord: 3.4ms | Allocations: 2695)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=102):
+  
+app/controllers/players_controller.rb:44:in `find_player'
+app/controllers/players_controller.rb:13:in `show'
+Started GET "/players/" for ::1 at 2020-11-04 16:25:59 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 6283)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 10610)
+
+
+Started GET "/players/86" for ::1 at 2020-11-04 16:26:03 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 15.7ms | Allocations: 7756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 1.7ms | Allocations: 12358)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:33:46 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1275)
+
+
+  
+SyntaxError (/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:3: syntax error, unexpected '{', expecting end
+... validates :name, :uniqueness {case_sensitive: false}
+...                              ^
+/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:5: syntax error, unexpected ':', expecting end
+    validates :player_number :numericality {greater_than_or...
+                             ^
+/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:5: syntax error, unexpected ':', expecting '}'
+...lity {greater_than_or_equal_to:
+...                              ^):
+  
+app/models/player.rb:3: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected ':', expecting end
+app/models/player.rb:5: syntax error, unexpected ':', expecting '}'
+app/models/player.rb:3: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected ':', expecting end
+app/models/player.rb:5: syntax error, unexpected ':', expecting '}'
+app/models/player.rb:3: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected ':', expecting end
+app/models/player.rb:5: syntax error, unexpected ':', expecting '}'
+app/controllers/players_controller.rb:9:in `new'
+Started GET "/players/new" for ::1 at 2020-11-04 16:34:34 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1269)
+
+
+  
+SyntaxError (/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:3: syntax error, unexpected '{', expecting end
+... validates :name, :uniqueness {case_sensitive: false}
+...                              ^
+/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:5: syntax error, unexpected '{', expecting end
+...:player_number, :numericality {greater_than_or_equal_to: 0, ...
+...                              ^):
+  
+app/models/player.rb:3: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected '{', expecting end
+app/models/player.rb:3: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected '{', expecting end
+app/models/player.rb:3: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected '{', expecting end
+app/controllers/players_controller.rb:9:in `new'
+Started GET "/players/new" for ::1 at 2020-11-04 16:34:59 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1316)
+
+
+  
+SyntaxError (/Users/benjaminhessel/Flatiron/code/m2m_with_validations/Futbol_coach/app/models/player.rb:5: syntax error, unexpected '{', expecting end
+...:player_number, :numericality {greater_than_or_equal_to: 0, ...
+...                              ^):
+  
+app/models/player.rb:5: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected '{', expecting end
+app/models/player.rb:5: syntax error, unexpected '{', expecting end
+app/controllers/players_controller.rb:9:in `new'
+Started GET "/players/new" for ::1 at 2020-11-04 16:35:09 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.8ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 55.1ms | Allocations: 8456)
+  Rendered players/new.html.erb within layouts/application (Duration: 59.5ms | Allocations: 8769)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 88.2ms | ActiveRecord: 6.7ms | Allocations: 19359)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:35:31 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"6vWFBDDBadIsOY96RI+UpLj9CLY4SHczIv7+SAkBMk8QzXoKHTq9XtDiY4im45Ib3ZOG4UuNYvWVwCoxwvpcAg==", "player"=>{"name"=>"", "phone_number"=>"23423", "email"=>"faker!@gmail.com", "player_number"=>"3", "club_id"=>"28"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:4:in `create'
+  [1m[36mPlayer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:4:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms | Allocations: 6197)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"players", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/players_controller.rb:5:in `create'
+Started POST "/players" for ::1 at 2020-11-04 16:39:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"6vWFBDDBadIsOY96RI+UpLj9CLY4SHczIv7+SAkBMk8QzXoKHTq9XtDiY4im45Ib3ZOG4UuNYvWVwCoxwvpcAg==", "player"=>{"name"=>"", "phone_number"=>"23423", "email"=>"faker!@gmail.com", "player_number"=>"3", "club_id"=>"30"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE "players"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 15.8ms | Allocations: 7343)
+  Rendered players/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 7408)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 89ms (Views: 60.5ms | ActiveRecord: 2.5ms | Allocations: 22732)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"players", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/players_controller.rb:10:in `create'
+Started POST "/players" for ::1 at 2020-11-04 16:39:55 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"6vWFBDDBadIsOY96RI+UpLj9CLY4SHczIv7+SAkBMk8QzXoKHTq9XtDiY4im45Ib3ZOG4UuNYvWVwCoxwvpcAg==", "player"=>{"name"=>"", "phone_number"=>"23423", "email"=>"faker!@gmail.com", "player_number"=>"3", "club_id"=>"30"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE "players"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 24.5ms | Allocations: 7308)
+  Rendered players/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 7373)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 84ms (Views: 35.1ms | ActiveRecord: 4.0ms | Allocations: 22535)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"players", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/players_controller.rb:10:in `create'
+Started POST "/players" for ::1 at 2020-11-04 16:42:21 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"6vWFBDDBadIsOY96RI+UpLj9CLY4SHczIv7+SAkBMk8QzXoKHTq9XtDiY4im45Ib3ZOG4UuNYvWVwCoxwvpcAg==", "player"=>{"name"=>"", "phone_number"=>"23423", "email"=>"faker!@gmail.com", "player_number"=>"3", "club_id"=>"30"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE "players"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:11
+  Rendered players/_player_form.html.erb (Duration: 21.0ms | Allocations: 7308)
+  Rendered players/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 7373)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 36.3ms | ActiveRecord: 3.9ms | Allocations: 22129)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:46:56 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (Duration: 2.1ms | Allocations: 1411)
+  Rendered players/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1725)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3067)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%if @player.errors.any?%>
+<%@player.errors.full_messages.each do |message|%>
+    <div><%=message%></div>
+<% end %>
+
+
+<%= form_for @player do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :phone_number %>
+        <%= f.number_field :phone_number %>
+        <%= f.label :email %>
+        <%= f.email_field :email, required:true %>
+        <%= f.label :player_number %>
+        <%= f.number_field :player_number %>
+        <%= f.label :club_id, "Team" %>
+        <%= f.collection_select :club_id, Club.all, :id, :name %>
+    <!--         object (optional b/c of line 4), method, collection, value_method, text_method-->
+        <%= f.submit %>
+<% end %>
+):
+1:    <%if @player.errors.any?%>
+2:    <%@player.errors.full_messages.each do |message|%>
+3:        <div><%=message%></div>
+4:    <% end %>
+5:    
+6:    
+7:    <%= form_for @player do |f| %>
+8:            <%= f.label :name %>
+9:            <%= f.text_field :name %>
+10:            <%= f.label :phone_number %>
+11:            <%= f.number_field :phone_number %>
+12:            <%= f.label :email %>
+13:            <%= f.email_field :email, required:true %>
+14:            <%= f.label :player_number %>
+15:            <%= f.number_field :player_number %>
+16:            <%= f.label :club_id, "Team" %>
+17:            <%= f.collection_select :club_id, Club.all, :id, :name %>
+18:        <!--         object (optional b/c of line 4), method, collection, value_method, text_method-->
+19:            <%= f.submit %>
+20:    <% end %>
+  
+app/views/players/_player_form.html.erb:22: syntax error, unexpected end-of-input, expecting end
+app/views/players/_player_form.html.erb:22: syntax error, unexpected end-of-input, expecting end
+app/views/players/_player_form.html.erb:22: syntax error, unexpected end-of-input, expecting end
+app/views/players/_player_form.html.erb:22: syntax error, unexpected end-of-input, expecting end
+app/views/players/_player_form.html.erb:22: syntax error, unexpected end-of-input, expecting end
+app/views/players/_player_form.html.erb:22: syntax error, unexpected end-of-input, expecting end
+app/views/players/new.html.erb:4
+Started GET "/players" for ::1 at 2020-11-04 16:47:09 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 71.0ms | Allocations: 1698)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 118.7ms | ActiveRecord: 0.7ms | Allocations: 6828)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:47:12 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 6.5ms | Allocations: 2430)
+  Rendered players/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 7055)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:47:27 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"I5z0y39OuQiNdmPpqbHVfUbFkIvF0sYNPryi9TzUnYjZpAvFUrVthHGtjxtL3dPCI6se3LYX08uJgnaM9y/zxQ==", "player"=>{"name"=>"", "phone_number"=>"23452", "email"=>"greatemail@email.com", "player_number"=>"34", "club_id"=>"27"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE "players"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 7.4ms | Allocations: 2899)
+  Rendered players/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 10123)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:48:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"I5z0y39OuQiNdmPpqbHVfUbFkIvF0sYNPryi9TzUnYjZpAvFUrVthHGtjxtL3dPCI6se3LYX08uJgnaM9y/zxQ==", "player"=>{"name"=>"", "phone_number"=>"23452", "email"=>"greatemail@email.com", "player_number"=>"34", "club_id"=>"27"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 6.6ms | Allocations: 2255)
+  Rendered players/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2320)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 22.2ms | ActiveRecord: 3.6ms | Allocations: 21697)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:48:50 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"U3aeWnfhYXFT7DAcF8LTg8XlGifk3qjbOVbvTy/35rqpTmFUWhq1/a833O71rtU8oIuUcJcbvR2OaDs25AyI9w==", "player"=>{"name"=>"BEn", "phone_number"=>"", "email"=>"greatemail@email.com", "player_number"=>"34", "club_id"=>"27"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "BEn"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 3.5ms | Allocations: 2234)
+  Rendered players/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 12.0ms | ActiveRecord: 1.0ms | Allocations: 8676)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:49:39 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"KSMpZpJYCrFXqbVbKyPKcSwW5G96TVb54MLAXgLcfL7TG9Zov6PePatyWanJT8zOSXhqOAmIQz9X/BQnyScS8w==", "player"=>{"name"=>"BEn", "phone_number"=>"1231", "email"=>"asdfsd@email.com", "player_number"=>"100", "club_id"=>"27"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "BEn"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 7.3ms | Allocations: 2236)
+  Rendered players/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2301)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 22.9ms | ActiveRecord: 0.9ms | Allocations: 8749)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:51:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"hbNWuMhMgCzOxiJ/UC2JGNNhFipj0RyHe/x+NcuZKCx/i6m25bdUoDIdzo2yQY+ntg+YfRAUCUHMwqpMAGJGYQ==", "player"=>{"name"=>"BEn", "phone_number"=>"1231", "email"=>"ebony@ledner-marquardt.biz", "player_number"=>"99", "club_id"=>"27"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "BEn"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.4ms | Allocations: 10435)
+
+
+  
+NoMethodError (undefined method `emails' for #<Player:0x00007feefaaa6680>
+Did you mean?  email
+               email?
+               email=):
+  
+app/controllers/players_controller.rb:5:in `create'
+Started GET "/players" for ::1 at 2020-11-04 16:51:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 6961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 40.2ms | ActiveRecord: 1.9ms | Allocations: 12048)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:51:56 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 24.7ms | Allocations: 8159)
+  Rendered players/new.html.erb within layouts/application (Duration: 25.1ms | Allocations: 8224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 1.6ms | Allocations: 12400)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:52:13 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"mdOwU9wjXhgeXOrVrRNrpOYE9LwzI3s1sZuH0+i4WdNj609d8diKlOKHBidPf20bg2p660DmbvMGpVOqI0M3ng==", "player"=>{"name"=>"Benjamin Hessel", "phone_number"=>"34534", "email"=>"ebony@ledner-marquardt.biz", "player_number"=>"99", "club_id"=>"29"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Benjamin Hessel"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "ebony@ledner-marquardt.biz"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 5.7ms | Allocations: 2220)
+  Rendered players/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 12.9ms | ActiveRecord: 1.3ms | Allocations: 10244)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:54:28 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"ASfSvrLsnFb7/3t2QB52exjR9dTTIr8JLdfvGX0VjwT7Hy2wnxdI2gckl4SicnDEfb97g6Dnqs+a6Ttgtu7hSQ==", "player"=>{"name"=>"Benjamin Hessel", "phone_number"=>"34534", "email"=>"ebony@ledner-marquardt.biz", "player_number"=>"99", "club_id"=>"29"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Benjamin Hessel"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "ebony@ledner-marquardt.biz"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 5.1ms | Allocations: 2408)
+  Rendered players/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2473)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 17.0ms | ActiveRecord: 2.5ms | Allocations: 23164)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:56:12 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"NbUsIi3W++hM3O9/pWWTGoph4WsXScCxqKabLEZCNBnPjdMsAC0vZLAHA41HCZWl7w9vPGSM1XcfmE9VjblaVA==", "player"=>{"name"=>"Benjamin Hessel", "phone_number"=>"3016027621", "email"=>"asdfasd@gmail.com", "player_number"=>"99", "club_id"=>"29"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Benjamin Hessel"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "asdfasd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mCACHE Player Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Benjamin Hessel"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[36mCACHE Player Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "asdfasd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Benjamin Hessel"], ["phone_number", 3016027621], ["email", "asdfasd@gmail.com"], ["player_number", 99], ["created_at", "2020-11-04 21:56:12.426607"], ["updated_at", "2020-11-04 21:56:12.426607"], ["club_id", 29]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:6:in `create'
+Redirected to http://localhost:3000/players/103
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms | Allocations: 7331)
+
+
+Started GET "/players/103" for ::1 at 2020-11-04 16:56:12 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 103], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:49:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.6ms | Allocations: 6097)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:57:46 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 36.4ms | Allocations: 8671)
+  Rendered players/new.html.erb within layouts/application (Duration: 39.3ms | Allocations: 8987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 61.3ms | ActiveRecord: 3.3ms | Allocations: 20234)
+
+
+Started GET "/players/nre" for ::1 at 2020-11-04 16:57:47 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"nre"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:49:in `find_player'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1414)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=nre):
+  
+app/controllers/players_controller.rb:49:in `find_player'
+app/controllers/players_controller.rb:18:in `show'
+Started POST "/players" for ::1 at 2020-11-04 16:58:28 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"RRyfwTIvWuMlYuwOJ2K5hSANH4OqqI9QimHX8tl8Ssi/JGDPH9SOb9m5APzFDr86RWOR1NltmpY9XwOLEockhQ==", "player"=>{"name"=>"Sharad", "phone_number"=>"123222222", "email"=>"fake234234@gmail.com", "player_number"=>"38", "club_id"=>"29"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Sharad"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "fake234234@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mCACHE Player Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Sharad"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[36mCACHE Player Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "fake234234@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sharad"], ["phone_number", 123222222], ["email", "fake234234@gmail.com"], ["player_number", 38], ["created_at", "2020-11-04 21:58:28.493233"], ["updated_at", "2020-11-04 21:58:28.493233"], ["club_id", 29]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:6:in `create'
+Redirected to http://localhost:3000/players/104
+Completed 302 Found in 21ms (ActiveRecord: 3.9ms | Allocations: 8085)
+
+
+Started GET "/players/104" for ::1 at 2020-11-04 16:58:28 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:49:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.7ms | Allocations: 5960)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:59:00 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"RRyfwTIvWuMlYuwOJ2K5hSANH4OqqI9QimHX8tl8Ssi/JGDPH9SOb9m5APzFDr86RWOR1NltmpY9XwOLEockhQ==", "player"=>{"name"=>"Sharad", "phone_number"=>"123-222-2232", "email"=>"fake234234@gmail.com", "player_number"=>"38", "club_id"=>"29"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Sharad"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "fake234234@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 8.3ms | Allocations: 2354)
+  Rendered players/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2419)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 30.3ms | ActiveRecord: 1.4ms | Allocations: 9953)
+
+
+Started POST "/players" for ::1 at 2020-11-04 16:59:10 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"authenticity_token"=>"M990hFa10QaqxV6XLXCX+9E5J5dy14FNqQ4DdVtkAmTJ54uKe04FilYesmXPHJFEtFepwAESlIseMNcMkJ9sKQ==", "player"=>{"name"=>"Sharadsdfs", "phone_number"=>"123-222-2232", "email"=>"fake23234@gmail.com", "player_number"=>"38", "club_id"=>"29"}, "commit"=>"Create Player"}
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Sharadsdfs"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mPlayer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "fake23234@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:5:in `create'
+  [1m[36mCACHE Player Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."name") = LOWER(?) LIMIT ?[0m  [["name", "Sharadsdfs"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[36mCACHE Player Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "players" WHERE LOWER("players"."email") = LOWER(?) LIMIT ?[0m  [["email", "fake23234@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "phone_number", "email", "player_number", "created_at", "updated_at", "club_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sharadsdfs"], ["phone_number", 123], ["email", "fake23234@gmail.com"], ["player_number", 38], ["created_at", "2020-11-04 21:59:10.391945"], ["updated_at", "2020-11-04 21:59:10.391945"], ["club_id", 29]]
+  ↳ app/controllers/players_controller.rb:6:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:6:in `create'
+Redirected to http://localhost:3000/players/105
+Completed 302 Found in 16ms (ActiveRecord: 3.0ms | Allocations: 7298)
+
+
+Started GET "/players/105" for ::1 at 2020-11-04 16:59:10 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:49:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.4ms | Allocations: 5622)
+
+
+Started DELETE "/players/105" for ::1 at 2020-11-04 16:59:21 -0500
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nVabBirDpS1/WeuLpIsTVmS9bCrbPqxA70JimRoalJBnbmQIBzhxoYOCB3lG5xXpAdPifaj7uYZYfLbg0eH63Q==", "id"=>"105"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:49:in `find_player'
+  [1m[36mPlayer Destroy (3.9ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 105]]
+  ↳ app/controllers/players_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/players
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms | Allocations: 1463)
+
+
+Started GET "/players" for ::1 at 2020-11-04 16:59:21 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 6078)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 16:59:27 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 3.1ms | Allocations: 2062)
+  Rendered players/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.1ms | Allocations: 6292)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 17:00:35 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.4ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 28.9ms | Allocations: 8533)
+  Rendered players/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 8844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 49.0ms | ActiveRecord: 3.9ms | Allocations: 20153)
+
+
+Started GET "/players/new" for ::1 at 2020-11-04 17:01:02 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mClub Load (0.5ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/players/_player_form.html.erb:18
+  Rendered players/_player_form.html.erb (Duration: 11.4ms | Allocations: 2428)
+  Rendered players/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.5ms | Allocations: 7860)
+
+
+Started GET "/players/" for ::1 at 2020-11-04 17:01:29 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/views/players/index.html.erb:4
+  Rendered players/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.2ms | Allocations: 6114)
+
+
+Started GET "/players/88" for ::1 at 2020-11-04 17:01:31 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"88"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:49:in `find_player'
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mClub Load (0.3ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:7
+  Rendered players/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1880)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 6744)
+
+
+Started GET "/clubs/28" for ::1 at 2020-11-04 17:01:32 -0500
+Processing by ClubsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mClub Load (0.1ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs" WHERE "clubs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/clubs_controller.rb:7:in `show'
+  Rendering clubs/show.html.erb within layouts/application
+  Rendered clubs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 5660)
+
+
+Started GET "/clubs" for ::1 at 2020-11-04 17:01:36 -0500
+Processing by ClubsController#index as HTML
+  Rendering clubs/index.html.erb within layouts/application
+  [1m[36mClub Load (0.2ms)[0m  [1m[34mSELECT "clubs".* FROM "clubs"[0m
+  ↳ app/views/clubs/index.html.erb:4
+  Rendered clubs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 988)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 5293)
+
+
